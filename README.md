@@ -10,30 +10,87 @@ Identify the most common ratings for movies and TV shows.
 List and analyze content based on release years, countries, and durations.
 Explore and categorize content based on specific criteria and keywords.
 
-## SCHEMA 
 
-DROP TABLE IF EXISTS netflix;
-CREATE TABLE netflix
-(
-    show_id      VARCHAR(5),
-    type         VARCHAR(10),
-    title        VARCHAR(250),
-    director     VARCHAR(550),
-    casts        VARCHAR(1050),
-    country      VARCHAR(550),
-    date_added   VARCHAR(55),
-    release_year INT,
-    rating       VARCHAR(15),
-    duration     VARCHAR(15),
-    listed_in    VARCHAR(250),
-    description  VARCHAR(550)
-);
+## Dataset
+The dataset used in this analysis contains information about:
+- Title
+- Type (Movie/TV Show)
+- Release Year
+- Country
+- Director
+- Cast
+- Rating
+- Duration
+- Genre
+- Description
+
+## Business Problems Solved
+Below are the 15 business problems addressed in this project:
+
+1. **Count the number of Movies vs TV Shows**
+   - Determine the distribution of Movies and TV Shows on Netflix.
+
+2. **Find the most common rating for Movies and TV Shows**
+   - Identify the most frequently assigned rating categories.
+
+3. **List all movies released in a specific year (e.g., 2020)**
+   - Retrieve a list of movies based on their release year.
+
+4. **Find the top 5 countries with the most content on Netflix**
+   - Rank countries by the amount of content they have on the platform.
+
+5. **Identify the longest movie**
+   - Find the movie with the longest duration.
+
+6. **Find content added in the last 5 years**
+   - Analyze content additions to Netflix in the past 5 years.
+
+7. **Find all the movies/TV shows by director 'Rajiv Chilaka'**
+   - List all content created by Rajiv Chilaka.
+
+8. **List all TV shows with more than 5 seasons**
+   - Identify TV shows with substantial seasons.
+
+9. **Count the number of content items in each genre**
+   - Analyze the distribution of content across different genres.
+
+10. **Find each year and the average number of content releases in India on Netflix**
+    - Determine the top 5 years with the highest average content releases.
+
+11. **List all movies that are documentaries**
+    - Retrieve movies categorized as documentaries.
+
+12. **Find all content without a director**
+    - Identify content items where the director information is missing.
+
+13. **Find how many movies actor 'Salman Khan' appeared in the last 10 years**
+    - Analyze Salman Khan's movie appearances over the past decade.
+
+14. **Find the top 10 actors who have appeared in the highest number of movies produced in India**
+    - Rank actors based on their movie appearances in India.
+
+15. **Categorize content based on the presence of keywords 'kill' and 'violence' in the description field**
+    - Label content as 'Bad' (contains keywords) or 'Good' (does not contain keywords) and count the number of items in each category.
+
+## Tools & Technologies
+- **SQL**: For querying and analyzing the dataset.
+- **Database Management System**: Any SQL-compatible platform like PostgreSQL, MySQL, or SQLite.
+
+
+## Key SQL Concepts Used
+- Aggregations (COUNT, AVG, MAX)
+- Joins
+- Filtering (WHERE, LIKE)
+- Grouping (GROUP BY)
+- Sorting (ORDER BY)
+- Subqueries
+- Case Statements
+
+## Results
+This project highlights key trends in Netflix content, providing actionable insights for decision-making and further exploration of the dataset.
+
+## Contributions
+Feel free to fork this repository and make contributions! If you have suggestions or enhancements, open an issue or submit a pull request.
 
 
 
-
-## Findings and Conclusion
-Content Distribution: The dataset contains a diverse range of movies and TV shows with varying ratings and genres.
-Common Ratings: Insights into the most common ratings provide an understanding of the content's target audience.
-Geographical Insights: The top countries and the average content releases by India highlight regional content distribution.
-Content Categorization: Categorizing content based on specific keywords helps in understanding the nature of content available on Netflix.
